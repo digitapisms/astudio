@@ -1,0 +1,5 @@
+{
+  "buildCommand": "if cd .vercel_build_output && ls .; then cd ..; else git clone https://github.com/flutter/flutter.git .vercel_build_output/flutter && export PATH=\"$PATH:`pwd`/.vercel_build_output/flutter/bin\" && flutter channel stable && flutter upgrade && cd ..; fi; export PATH=\"$PATH:`pwd`/.vercel_build_output/flutter/bin\" && flutter pub get && flutter build web --release --no-tree-shake-icons",
+  "outputDirectory": "build/web",
+  "installCommand": "echo 'Skipping default install'"
+}
